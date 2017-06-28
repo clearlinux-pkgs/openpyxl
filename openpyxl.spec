@@ -4,12 +4,12 @@
 #
 Name     : openpyxl
 Version  : 2.5.02
-Release  : 1
+Release  : 2
 URL      : https://pypi.python.org/packages/5a/8b/798a853ef87d505392227b91d598fd0bdfc8552e64020092e262b1ea7d5f/openpyxl-2.5.0a2.tar.gz
 Source0  : https://pypi.python.org/packages/5a/8b/798a853ef87d505392227b91d598fd0bdfc8552e64020092e262b1ea7d5f/openpyxl-2.5.0a2.tar.gz
 Summary  : A Python library to read/write Excel 2010 xlsx/xlsm files
 Group    : Development/Tools
-License  : MIT/Expat
+License  : MIT
 Requires: openpyxl-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -38,12 +38,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1498670689
+export SOURCE_DATE_EPOCH=1498670946
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1498670689
+export SOURCE_DATE_EPOCH=1498670946
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
